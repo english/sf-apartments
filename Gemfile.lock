@@ -1,0 +1,23 @@
+GIT
+  remote: https://github.com/english/speculation.git
+  revision: 4f9e71a75937d17d4da60ffbd946077776dfd50a
+  ref: 4f9e71a75937d17d4da60ffbd946077776dfd50a
+  specs:
+    speculation (0.1.0)
+      concurrent-ruby (~> 1.0)
+      rantly (~> 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.0.4)
+    rantly (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  speculation!
+
+BUNDLED WITH
+   1.14.3
