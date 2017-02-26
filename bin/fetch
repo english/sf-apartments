@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+fetch_feed() {
+  wget --quiet \
+    --output-document=- https://sfbay.craigslist.org/search/sfc/apa\?hasPic\=1\&nh\=25\&min_price\=2700\&max_price\=3600\&bedrooms\=1\&availabilityMode\=0\&format\=rss
+}
+
+extract_links() {
+  grep rdf:resource | egrep --only-matching 'http://.*html'
+}
+
+fetch_pages() {
+  local directory_prefix=$1
+
+  xargs wget \
+    --no-directories  \
+    --quiet \
+    --show-progress \
+    --timestamp \
+    --progress=bar \
+    --directory-prefix=$directory_prefix
+}
+
+local dir=${1:-"html"}
+
+mkdir -p $dir
+
+fetch_feed | extract_links | fetch_pages $dir
