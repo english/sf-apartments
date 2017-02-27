@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+Bundler.require
+
+require "./lib/sf_apartments"
+
+S = Speculation
+require 'speculation/gen'
+require 'speculation/test'
+Gen = S::Gen
+STest = S::Test
+
+Pry.start

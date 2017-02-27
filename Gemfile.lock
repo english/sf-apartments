@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/english/speculation.git
-  revision: 4f9e71a75937d17d4da60ffbd946077776dfd50a
-  ref: 4f9e71a75937d17d4da60ffbd946077776dfd50a
+PATH
+  remote: /Users/jamie/Projects/speculation
   specs:
     speculation (0.1.0)
       concurrent-ruby (~> 1.0)
@@ -10,13 +8,65 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    concurrent-ruby (1.0.4)
+    ansi (1.5.0)
+    ast (2.3.0)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.5-java)
+    ffi (1.9.17-java)
+    httpclient (2.8.3)
+    lock_jar (0.15.2)
+      naether (~> 0.15.0)
+      thor (>= 0.18.1)
+    method_source (0.8.2)
+    naether (0.15.0)
+      httpclient
+      rjb (> 1.4.0, < 1.6.0)
+    naether (0.15.0-java)
+      httpclient
+    oga (2.9)
+      ast
+      ruby-ll (~> 2.1)
+    oga (2.9-java)
+      ast
+      ruby-ll (~> 2.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry (0.10.4-java)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      spoon (~> 0.0)
+    pry-doc (0.10.0)
+      pry (~> 0.9)
+      yard (~> 0.9)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     rantly (1.0.0)
+    rjb (1.5.5)
+    ruby-ll (2.1.2)
+      ansi
+      ast
+    ruby-ll (2.1.2-java)
+      ansi
+      ast
+    slop (3.6.0)
+    spoon (0.0.6)
+      ffi
+    thor (0.19.4)
+    yard (0.9.8)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
+  lock_jar
+  oga
+  pry
+  pry-doc
+  pry-nav
   speculation!
 
 BUNDLED WITH

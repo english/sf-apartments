@@ -1,0 +1,27 @@
+[{:db/ident :listing/url
+  :db/valueType :db.type/uri
+  :db/unique :db.unique/identity
+  :db/cardinality :db.cardinality/one
+  :db/doc "A listing's canonical URL"}
+ {:db/ident :listing/html
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/price
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/move_in_date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/bed_count
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/bath_count
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/tags
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/many}
+ {:db/ident :listing/body
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+ ]
