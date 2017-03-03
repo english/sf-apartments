@@ -1,4 +1,6 @@
-[{:db/ident :listing/url
+[
+ ;; listing
+ {:db/ident :listing/url
   :db/valueType :db.type/uri
   :db/unique :db.unique/identity
   :db/cardinality :db.cardinality/one
@@ -24,4 +26,24 @@
  {:db/ident :listing/body
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
+ {:db/ident :listing/status
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+ ;; comment
+ {:db/ident :listing/comments
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/isComponent true}
+ {:db/ident :comment/body
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+ {:db/ident :comment/author
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :author/jamie}
+ {:db/ident :author/helen}
+
+ {:db/ident :status/rejected}
+ {:db/ident :status/considering}
  ]
